@@ -21,8 +21,7 @@ Kun-Hsiang Lin<sup>1</sup>&nbsp; Yu-Wen Tseng<sup>1</sup>&nbsp; Kang-Yang Huang<
 - This paper proposes InstructFLIP, a novel instruction-tuned VLM framework for FAS, which integrates textual supervision to enhance semantic understanding of spoofing cues.
 - We design a content-style decoupling mechanism that explicitly separates spoof-related (content) and spoof-irrelevant (style) information, improving generalization to unseen domains.
 - We introduce a meta-domain learning strategy to eliminate training redundancy in cross-domain settings by utilizing diverse image-instruction pairs sampled from a structured meta-domain.
-- Experimental results demonstrate that InstructFLIP surpasses SOTA methods across multiple FAS benchmarks, effectively cap-
-  turing spoof-related patterns through language-guided supervision while substantially reducing training overhead, thereby enhancing its applicability in real-world scenarios.
+- Experimental results demonstrate that InstructFLIP surpasses SOTA methods across multiple FAS benchmarks, effectively capturing spoof-related patterns through language-guided supervision while substantially reducing training overhead, thereby enhancing its applicability in real-world scenarios.
 
 ## Instruction for code usage
 
