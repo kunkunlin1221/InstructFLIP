@@ -27,6 +27,14 @@ Kun-Hsiang Lin<sup>1</sup>&nbsp; Yu-Wen Tseng<sup>1</sup>&nbsp; Kang-Yang Huang<
 
 We recommend using Docker to run the code, which can ensure a consistent environment across different machines.
 
+### Clone the repository
+
+Install [git-lfs](https://git-lfs.github.com/) first, then clone the repository:
+
+```bash
+git clone https://github.com/kunkunlin1221/InstructFLIP.git
+```
+
 ### Prepare the dataset
 
 see [data_preprocess/README.md](data_preprocess/README.md)
