@@ -1,0 +1,124 @@
+protocol_name: orica-to-mciowcs
+data:
+  CA2MCIOWCS:
+    train:
+      cls_name: BalanceDataset
+      kwargs:
+        dataset_size: 12800
+        datasets_kwargs:
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: live_only
+              name: CelebA_Spoof(CA)
+              resolution: low
+              ssl_mode: true
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+              resolution: low
+              ssl_mode: true
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: live_only
+              name: CelebA_Spoof(CA)
+              resolution: mid
+              ssl_mode: true
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+              resolution: mid
+              ssl_mode: true
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: live_only
+              name: CelebA_Spoof(CA)
+              resolution: high
+              ssl_mode: true
+          - cls_name: CAInstructDataset
+            kwargs:
+              csv_file: data/processed/ca/train.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+              resolution: high
+              ssl_mode: true
+    valid:
+      - cls_name: CAInstructDataset
+        kwargs:
+          csv_file: data/processed/ca/test.csv
+          train: false
+          mode: all
+          name: CelebA_Spoof(CA)
+          num_samples: 9600
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: MSU(M)
+          data_folder: data/processed/rgb/aligned/MCIO/msu
+          train: false
+          mode: all
+          gen_video_id: true
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: Casia(C)
+          data_folder: data/processed/rgb/aligned/MCIO/casia
+          train: false
+          mode: all
+          gen_video_id: true
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: Replay(I)
+          data_folder: data/processed/rgb/aligned/MCIO/replay
+          train: false
+          mode: all
+          gen_video_id: true
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: Oulu(O)
+          data_folder: data/processed/rgb/aligned/MCIO/oulu
+          train: false
+          mode: all
+          gen_video_id: true
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: WMCA(W)
+          data_folder: data/processed/rgb/aligned/WCS/wmca
+          train: false
+          mode: all
+          gen_video_id: True
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: CeFA(C)
+          data_folder: data/processed/rgb/aligned/WCS/cefa
+          train: false
+          mode: all
+          gen_video_id: true
+      - cls_name: RGBInstructDataset
+        kwargs:
+          name: SURF(S)
+          data_folder: data/processed/rgb/aligned/WCS/surf
+          train: false
+          mode: all
+          gen_video_id: True
+
+dataloader:
+  train:
+    num_workers: 8
+    batch_size: 24 # 8 * n
+    pin_memory: True
+    shuffle: true
+  valid:
+    num_workers: 8
+    batch_size: 24 # 8 * n
+    shuffle: true

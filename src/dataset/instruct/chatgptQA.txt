@@ -1,0 +1,170 @@
+Certainly! Here are three example instructions or QA pairs for each Face Anti-Spoofing (FAS) class, tailored to emphasize the unique characteristics that distinguish each type.
+
+---
+
+### **Class 1: Real Face**
+1. **Instruction**: “Check for natural skin texture with subtle variations and depth, especially around the nose and cheek areas.”
+   - *Q*: “Does the face display realistic skin texture and depth variations?”
+   - *A*: “Yes, consistent with a real face.”
+
+2. **Instruction**: “Analyze for soft shadow gradients on the face that indicate natural lighting.”
+   - *Q*: “Do the shadows appear soft and natural?”
+   - *A*: “Yes, indicating a real face.”
+
+3. **Instruction**: “Evaluate for natural, consistent movements like blinking and slight head tilts.”
+   - *Q*: “Does the subject exhibit natural movements, such as blinking and subtle head tilts?”
+   - *A*: “Yes, consistent with a real face.”
+
+---
+
+### **Class 2: Photo**
+1. **Instruction**: “Check for flat textures and lack of depth around the nose and eye regions, common in printed photos.”
+   - *Q*: “Is the face flat with limited 3D structure around prominent features?”
+   - *A*: “Yes, consistent with a photo.”
+
+2. **Instruction**: “Look for uniform lighting across the face without natural shadow variations.”
+   - *Q*: “Are there minimal or uniform shadows on the face?”
+   - *A*: “Yes, typical of a photo.”
+
+3. **Instruction**: “Identify any signs of pixelation or printing artifacts in the face image.”
+   - *Q*: “Is there visible pixelation or printing artifacts?”
+   - *A*: “Yes, indicating a photo.”
+
+---
+
+### **Class 3: Poster**
+1. **Instruction**: “Detect high pixelation and limited detail resolution common in poster images.”
+   - *Q*: “Does the face appear pixelated with low-resolution details?”
+   - *A*: “Yes, consistent with a poster.”
+
+2. **Instruction**: “Look for exaggerated flatness with uniform shadows across the face.”
+   - *Q*: “Is the face flat with uniform shadowing typical of a printed surface?”
+   - *A*: “Yes, consistent with a poster.”
+
+3. **Instruction**: “Check for unusual reflections or gloss from the printed surface.”
+   - *Q*: “Are there reflections or gloss indicative of a poster?”
+   - *A*: “Yes, consistent with a poster.”
+
+---
+
+### **Class 4: A4-Paper**
+1. **Instruction**: “Look for high contrast edges with a lack of depth and realistic skin texture.”
+   - *Q*: “Is the image contrast high with flat texture and minimal depth?”
+   - *A*: “Yes, consistent with A4-paper.”
+
+2. **Instruction**: “Detect lack of natural shadows around facial features.”
+   - *Q*: “Are there limited shadows around the nose, eyes, and chin?”
+   - *A*: “Yes, consistent with A4-paper.”
+
+3. **Instruction**: “Look for signs of edge warping or bending, typical of thin paper.”
+   - *Q*: “Is there any edge warping or bending noticeable?”
+   - *A*: “Yes, indicating A4-paper.”
+
+---
+
+### **Class 5: 2D Face Mask**
+1. **Instruction**: “Identify shallow 3D structure, particularly around the cheeks and nose, with flatness in other areas.”
+   - *Q*: “Is there a slight 3D structure but overall flatness on the face?”
+   - *A*: “Yes, consistent with a 2D face mask.”
+
+2. **Instruction**: “Look for edges of the mask around the face or irregular skin texture.”
+   - *Q*: “Are mask edges visible or is the skin texture inconsistent?”
+   - *A*: “Yes, suggesting a 2D face mask.”
+
+3. **Instruction**: “Analyze lighting inconsistencies; masks often reflect light differently than real skin.”
+   - *Q*: “Are there inconsistent lighting effects on the face?”
+   - *A*: “Yes, indicating a 2D face mask.”
+
+---
+
+### **Class 6: 2D Upper-Body Mask**
+1. **Instruction**: “Check for flatness in the upper body with limited contouring around shoulders and neck.”
+   - *Q*: “Is there a flat appearance around the upper body and neck?”
+   - *A*: “Yes, consistent with a 2D upper-body mask.”
+
+2. **Instruction**: “Look for unnatural uniformity across the body and face, common with 2D masks.”
+   - *Q*: “Is the texture uniform across the entire upper body?”
+   - *A*: “Yes, consistent with a 2D upper-body mask.”
+
+3. **Instruction**: “Detect the absence of depth and shadow variations on the upper body.”
+   - *Q*: “Are depth and shadow variations minimal on the upper body?”
+   - *A*: “Yes, suggesting a 2D upper-body mask.”
+
+---
+
+### **Class 7: 2D Region Mask**
+1. **Instruction**: “Focus on individual face regions for signs of masking (e.g., shallow nose or mouth).”
+   - *Q*: “Is there minimal 3D detail in specific regions like the nose or mouth?”
+   - *A*: “Yes, consistent with a 2D region mask.”
+
+2. **Instruction**: “Look for irregular depth, especially around isolated facial areas like eyes or cheeks.”
+   - *Q*: “Does depth vary unnaturally across specific face regions?”
+   - *A*: “Yes, suggesting a 2D region mask.”
+
+3. **Instruction**: “Identify region-specific lighting inconsistencies typical of layered masks.”
+   - *Q*: “Are there unnatural lighting patterns on specific face areas?”
+   - *A*: “Yes, consistent with a 2D region mask.”
+
+---
+
+### **Class 8: PC Screen**
+1. **Instruction**: “Detect pixelation and moiré patterns often seen on PC screens.”
+   - *Q*: “Are there pixelation or screen patterns visible?”
+   - *A*: “Yes, consistent with a PC screen.”
+
+2. **Instruction**: “Identify flatness and glare commonly observed on large screens.”
+   - *Q*: “Is there flatness with possible screen glare?”
+   - *A*: “Yes, indicating a PC screen.”
+
+3. **Instruction**: “Look for reflections from the PC screen that differ from natural reflections.”
+   - *Q*: “Are reflections present that appear artificial?”
+   - *A*: “Yes, suggesting a PC screen.”
+
+---
+
+### **Class 9: Pad Screen**
+1. **Instruction**: “Check for smaller pixel sizes and limited depth typical of pad screens.”
+   - *Q*: “Is there a flat appearance with screen pixel patterns?”
+   - *A*: “Yes, consistent with a pad screen.”
+
+2. **Instruction**: “Identify minimal screen glare and flat texture on the face.”
+   - *Q*: “Is the face flat with minimal screen glare?”
+   - *A*: “Yes, indicating a pad screen.”
+
+3. **Instruction**: “Look for minor reflections or artifacts from the pad’s display.”
+   - *Q*: “Are there minor reflections typical of a pad screen?”
+   - *A*: “Yes, consistent with a pad screen.”
+
+---
+
+### **Class 10: Phone Screen**
+1. **Instruction**: “Detect small pixel patterns and flatness typical of smaller screens.”
+   - *Q*: “Are there small screen pixels visible?”
+   - *A*: “Yes, consistent with a phone screen.”
+
+2. **Instruction**: “Look for minor reflections and flat features indicative of a phone.”
+   - *Q*: “Is the face flat with subtle screen reflections?”
+   - *A*: “Yes, suggesting a phone screen.”
+
+3. **Instruction**: “Check for high pixel density but lack of depth or realistic shadows.”
+   - *Q*: “Is there high pixel density but no depth cues?”
+   - *A*: “Yes, consistent with a phone screen.”
+
+---
+
+### **Class 11: 3D Mask**
+1. **Instruction**: “Identify 3D contours but look for unrealistic skin texture or color transitions.”
+   - *Q*: “Does the face have 3D contours with unnatural skin tones?”
+   - *A*: “Yes, consistent with a 3D mask.”
+
+2. **Instruction**: “Check for hard mask edges around the face, particularly near the hairline or jaw.”
+   - *Q*: “Are there visible mask edges around the face?”
+   - *A*: “Yes, indicating a 3D mask.”
+
+3. **Instruction**: “Look for reflection patterns inconsistent with human skin, typical of synthetic materials.”
+   - *Q*: “Are reflection patterns unnatural, suggesting synthetic material?”
+   - *A*: “Yes, consistent with a 3D mask.”
+
+---
+
+These tailored instructions and QA pairs should help the model recognize key features for each class, improving its ability to distinguish between real and spoofed faces.

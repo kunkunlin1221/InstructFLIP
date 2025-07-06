@@ -1,0 +1,21 @@
+{
+  "img_path": "data/processed/rgb/aligned/WCS/wmca/test/real/12.02.18_056_03_000_0_01_03.jpg",
+  "content_head": {
+    "question": "Choose the correct option to the following question: Which type of spoof type is in this image?\n(1) Real face (2) Photo (3) Poster (4) A4-paper (5) 2D face mask (6) 2D upper-body mask (7) 2D region mask (8) PC screen (9) Pad screen (10) Phone screen (11) 3D mask",
+    "answer": "No GT",
+    "pred": "(1) Real face",
+    "label": "real"
+  },
+  "binary_head": {
+    "pred": "fake",
+    "label": "real",
+    "score": 0.8539127111434937
+  },
+  "style_head": [
+    {
+      "question": "Choose the correct option to the following question: What is the camera quality in this image?\n(1) Low (2) Medium (3) High",
+      "answer": "No GT",
+      "pred": "(2) Medium"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+data:
+  CA2MCIOWCS:
+    train:
+      cls_name: BalanceDataset
+      kwargs:
+        dataset_size: 160
+        datasets_kwargs:
+          - cls_name: CADataset
+            kwargs:
+              csv_file: data/processed/ca/train_label.csv
+              train: true
+              mode: live_only
+              name: CelebA_Spoof(CA)
+          - cls_name: CADataset
+            kwargs:
+              csv_file: data/processed/ca/train_label.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+          - cls_name: CADataset
+            kwargs:
+              csv_file: data/processed/ca/test_label.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+          - cls_name: CADataset
+            kwargs:
+              csv_file: data/processed/ca/test_label.csv
+              train: true
+              mode: fake_only
+              name: CelebA_Spoof(CA)
+    valid:
+      - cls_name: RGBDataset
+        kwargs:
+          name: MSU(M)
+          data_folder: data/processed/rgb/aligned/MCIO/msu
+          train: false
+          mode: all
+          gen_video_id: true
+
+dataloader:
+  train:
+    num_workers: 8
+    batch_size: 16 # 8 * n
+    pin_memory: True
+  valid:
+    num_workers: 8
+    batch_size: 16 # 8 * n

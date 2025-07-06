@@ -1,0 +1,30 @@
+mode: rgb
+
+lm:
+  automatic_optimization: true
+  model:
+    cls_name: SSDG
+    backbon_name: resnet18
+    in_channels: 3
+
+  solver:
+    optimizer:
+      cls_name: AdamW
+      lr: 1.e-3
+      weight_decay: 1.e-7
+    lr_scheduler:
+      cls_name: OneCycleLR
+      max_lr: 5.e-6
+      pct_start: 0.1
+      anneal_strategy: cos
+      final_div_factor: 1
+      div_factor: 10
+
+trainer:
+  precision: bf16-mixed
+  max_epochs: 20
+  accelerator: gpu
+  benchmark: false
+  deterministic: true
+  num_sanity_val_steps: 0
+  accumulate_grad_batches: 1

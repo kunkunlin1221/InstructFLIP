@@ -1,0 +1,31 @@
+{
+  "img_path": "data/processed/ca/Data/test/6822/spoof/547955.jpg",
+  "content_head": {
+    "question": "Choose the correct option to the following question: Which type of spoof type is in this image?\n(1) Real face (2) Photo (3) Poster (4) A4-paper (5) 2D face mask (6) 2D upper-body mask (7) 2D region mask (8) PC screen (9) Pad screen (10) Phone screen (11) 3D mask",
+    "answer": "(5) 2D face mask",
+    "pred": "(5) 2D face mask",
+    "label": "fake"
+  },
+  "binary_head": {
+    "pred": "fake",
+    "label": "fake",
+    "score": 0.9999992847442627
+  },
+  "style_head": [
+    {
+      "question": "Choose the correct option to the following question: What is the illumination condition in this image?\n(1) Normal (2) Strong (3) Back (4) Dark",
+      "answer": "(3) Back",
+      "pred": "(3) Back"
+    },
+    {
+      "question": "Choose the correct option to the following question: What is the environment in this image?\n(1) Indoor (2) Outdoor",
+      "answer": "(1) Indoor",
+      "pred": "(1) Indoor"
+    },
+    {
+      "question": "Choose the correct option to the following question: What is the camera quality in this image?\n(1) Low (2) Medium (3) High",
+      "answer": "(2) Medium",
+      "pred": "(2) Medium"
+    }
+  ]
+}
