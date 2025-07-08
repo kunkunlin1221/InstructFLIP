@@ -8,7 +8,7 @@ Kun-Hsiang Lin<sup>1</sup>&nbsp; Yu-Wen Tseng<sup>1</sup>&nbsp; Kang-Yang Huang<
 
 [![ACM MM](https://img.shields.io/badge/ACMMM-coming_soon-green.svg)]()&nbsp; [![arXiv](https://img.shields.io/badge/arXiv-coming_soon-COLOR.svg)]()&nbsp; [![Project](https://img.shields.io/badge/Project-InstructFLIP-blue)](https://kunkunlin1221.github.io/InstructFLIP/)
 
-<img src="docs/imgs/teaser.png" width="600">
+<img src="docs/static/images/MM_25-teaser.png" width="600">
 
 </div>
 
@@ -16,7 +16,7 @@ Kun-Hsiang Lin<sup>1</sup>&nbsp; Yu-Wen Tseng<sup>1</sup>&nbsp; Kang-Yang Huang<
 
 ## Highlights
 
-<img src="docs/imgs/framework.png" width="1000">
+<img src="docs/static/images/MM_25-framework.png" width="1000">
 
 - This paper proposes InstructFLIP, a novel instruction-tuned VLM framework for FAS, which integrates textual supervision to enhance semantic understanding of spoofing cues.
 - We design a content-style decoupling mechanism that explicitly separates spoof-related (content) and spoof-irrelevant (style) information, improving generalization to unseen domains.
