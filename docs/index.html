@@ -4,20 +4,26 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="InstructFLIP: A training-free method that enhances image generation by coupling Latent Diffusion Models with Visual Language Models to refine human-object interactions.">
+  <meta name="description" content="InstructFLIP: InstructFLIP is a unified instruction-tuned framework that leverages
+  vision-language models and a meta-domain strategy to achieve efficient face anti-spoofing generalization without
+  redundant cross-domain training.">
   <meta property="og:title" content="InstructFLIP: Exploring Unified Vision-Language Model for Face Anti-spoofing"/>
-  <meta property="og:description" content="InstructFLIP: A training-free method that enhances image generation by coupling Latent Diffusion Models with Visual Language Models to refine human-object interactions."/>
+  <meta property="og:description" content="InstructFLIP: InstructFLIP is a unified instruction-tuned framework that
+  leverages vision-language models and a meta-domain strategy to achieve efficient face anti-spoofing generalization
+  without redundant cross-domain training."/>
   <meta property="og:url" content="https://kunkunlin1221.github.io/InstructFLIP/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="docs/static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
   <meta name="twitter:title" content="InstructFLIP: Exploring Unified Vision-Language Model for Face Anti-spoofing">
-  <meta name="twitter:description" content="ReCorD: A training-free method that enhances image generation by coupling Latent Diffusion Models with Visual Language Models to refine human-object interactions.">
+  <meta name="twitter:description" content="InstructFLIP: InstructFLIP is a unified instruction-tuned framework that
+  leverages vision-language models and a meta-domain strategy to achieve efficient face anti-spoofing generalization
+  without redundant cross-domain training.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="docs/static/images/your_twitter_banner_image.png">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Face Anti-spoofing, Vision-language models, Unified model">
@@ -25,111 +31,111 @@
 
 
   <title>InstructFLIP: Exploring Unified Vision-Language Model for Face Anti-spoofing</title>
-  <link rel="icon" type="image/x-icon" href="docs/static/images/icon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="docs/static/css/bulma.min.css">
-  <link rel="stylesheet" href="docs/static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="docs/static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="docs/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="docs/static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="docs/static/js/fontawesome.all.min.js"></script>
-  <script src="docs/static/js/bulma-carousel.min.js"></script>
-  <script src="docs/static/js/bulma-slider.min.js"></script>
-  <script src="docs/static/js/index.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">[ACM MM 2025] InstructFLIP:</h1>
           <h1 class="title is-1 publication-title">Exploring Unified Vision-Language Model</h1>
           <h1 class="title is-1 publication-title">for Face Anti-spoofing</h1>
-          <div class="is-size-5 publication-authors">
-            <!-- Paper authors -->
-            <span class="author-block">
-              <a href="https://orcid.org/0009-0005-5739-4228" target="_blank">Kun-Hsiang Lin</a><sup style="color:#0000FF;">1</sup><sup style="color: #000000;">,</sup>,</span>
-            <span class="author-block">
-              <a href="https:///" target="_blank">Yu-Wen Tseng</a><sup style="color: #C00000;">1</sup>,</span>
-            <span class="author-block">
-              <a href="https://alberthkyhky.github.io/" target="_blank">Kang-Yang Huang</a><sup style="color:#0000FF;">1</sup>,</span>
-            <span class="author-block">
-              <a href="https://jhih-ciang.github.io/" target="_blank">Jhih-Ciang Wu</a><sup style="color: #C00000;">2</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.csie.ntu.edu.tw/~wenhuang/" target="_blank">Wen-Huang Cheng</a><sup style="color: #C00000;">1</sup>
-              </span>
-            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-          </div>
+            <!-- <h1 class="title is-1 publication-title">ReCorD: Reasoning and Correcting Diffusion for HOI Generation</h1> -->
+            <div class="is-size-5 publication-authors">
+				<!-- Paper authors -->
+				<span class="author-block">
+				  <a href="https://kunkunlin1221.github.io" target="_blank">Kun-Hsiang Lin</a><sup style="color:#0000FF;">1</sup><sup style="color: #000000;">,</sup>,</span>
+				<span class="author-block">
+				  <a href="https:///" target="_blank">Yu-Wen Tseng</a><sup style="color: #0000FF;">1</sup>,</span>
+				<span class="author-block">
+				  <a href="https://alberthkyhky.github.io/" target="_blank">Kang-Yang Huang</a><sup style="color:#0000FF;">1</sup>,</span>
+				<span class="author-block">
+				  <a href="https://jhih-ciang.github.io/" target="_blank">Jhih-Ciang Wu</a><sup style="color: #C00000;">2</sup>,</span>
+				<span class="author-block">
+				  <a href="https://www.csie.ntu.edu.tw/~wenhuang/" target="_blank">Wen-Huang Cheng</a><sup style="color: #0000FF;">1</sup>
+				  </span>
+				<!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+			  </div>
 
-          <br/>
-          <div class="is-size-5 publication-authors">
-            <ul class="affiliation-list"></ul>
-              <!-- <li class="affiliation"></li> -->
-                <img src="docs/static/images/ntu.jpg" alt="NTU Logo" class="logo""/>
-                <span class="author-block"><sup style="color: #C00000;">1</sup>National Taiwan University</span>
-                <img src="docs/static/images/ntu.jpg" alt="NTU Logo" class="logo""/>
-                <span class="author-block"><sup style="color: #C00000;">2</sup>National Taiwan University</span>
-              <!-- </li> -->
-            </ul>
-          </div>
-          <br/>
+            <br/>
+            <div class="is-size-5 publication-authors">
+              <ul class="affiliation-list"></ul>
+                <!-- <li class="affiliation"></li> -->
+                  <img src="./static/images/ntu.png" alt="NTU Logo" class="logo" width="20" height="20"/>
+                  <span class="author-block"><sup style="color:#0000FF;">1</sup>National Taiwan University, </span>
+				<!-- </li> -->
+                  <img src="./static/images/ntnu.png" alt="NTU Logo" class="logo" width="20" height="20"/>
+                  <span class="author-block"><sup style="color: #C00000;">2</sup>National Taiwan Normal University</span>
+                <!-- </li> -->
+              </ul>
+            </div>
+            <br/>
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/xxxx.xxxx" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                      </span>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- ArXiv abstract Link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.17911" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="ai ai-arxiv"></i>
-                </span>
-                <span>arXiv</span>
-              </a>
-              </span>
+                      <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/xxxx.xxxx" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                      </span>
 
-              <!-- Arxiv PDF link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2407.17911" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Paper</span>
-              </a>
-              </span>
-
-              <!-- Github link -->
-              <span class="link-block">
-                <a href="https://github.com/j1anglin/ReCorD" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-              </a>
-              </span>
-            <!-- Supplementary PDF link -->
-            <!-- <span class="link-block">
-              <a href="docs/static/pdfs/supplementary_material.pdf" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fas fa-file-pdf"></i>
-              </span>
-              <span>Supplementary</span>
-            </a>
-          </span> -->
-
+                      <!-- Github link -->
+                      <span class="link-block">
+                        <a href="https://github.com/kunkunlin1221/InstructFLIP" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                      </span>
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
             </div>
           </div>
         </div>
@@ -138,18 +144,168 @@
   </div>
 </section>
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title" style="text-align: center;">BibTeX</h2>
-    <pre><code>@inproceedings{lin2025instructflip,
-  title={InstructFLIP: Exploring Unified Vision-Language Model for Face Anti-spoofing},
-  author = {Kun-Hsiang, Lin and Yu-Wen, Tseng and Kang-Yang, Huang and Jhih-Ciang, Wu and Wen-Huang, Cheng},
-  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia},
-  year={2025},
-  publisher={ACM},
-}</code></pre>
+
+<!-- Teaser Image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/MM_25-teaser.png" alt="Teaser" class="center-image" style="max-width: 95%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        InstructFLIP: A unified instruction-tuned framework leverages vision-language models and a meta-domain strategy
+        to achieve efficient face anti-spoofing generalization without redundant cross-domain training.
+      </h2>
+    </div>
   </div>
+</section>
+<!-- End teaser Image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Face anti-spoofing (FAS) aims to construct a robust system that can withstand diverse attacks. While recent
+            efforts have concentrated mainly on cross-domain generalization, two significant challenges persist:
+            <em>limited semantic understanding of attack types</em> and <em>redundancy across domains.</em>
+            We address the first by integrating vision-language models (VLMs) to enhance the perception of visual input.
+            For the second challenge, we employ a meta-domain strategy to learn a unified model that generalizes well
+            across multiple domains. Our proposed <em>InstrctFLIP</em> is a novel instruction-tuned framework that
+            leverages VLMs to enhance generalization via textual guidance trained solely on a single domain.
+            At its core, InstructFLIP explicitly decouples instructions into content and style components, where
+            content-based instructions focus on the essential semantics of spoofing, and style-based instructions
+            consider variations related to the environment and camera characteristics. Extensive experiments demonstrate
+            the effectiveness of InstructFLIP by outperforming SOTA models in accuracy and substantially reducing
+            training redundancy across diverse domains in FAS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3" style="text-align: center;">Pipeline</h2>
+      <img src="static/images/MM_25-framework.png" alt="Pipeline" class="center-image" style="max-width: 95%; height: auto;"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Overview of the proposed InstructFLIP framework for FAS.</strong>
+        </h2>
+        <p>
+          We first encode the input image <i>x</i>, resulting in the separated content and style features <i>f<sub>c</sub></i> and <i>f<sub>s</sub></i>.
+          The dual-branch architecture presented in (a) and (b) is designed for instruction tuning based on the corresponding expertise in each branch.
+          Eventually, the prediction for determining whether <i>x</i> is spoofing or not is carried out in (c) via a classifier 𝒞,
+          according to the fused queries and <i>f<sub>c</sub></i>, coupled with the cue map generated by 𝒢.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+<!-- Quantitative Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Quantitative Results. -->
+    <div class="columns is-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3" style="text-align: center;">Quantitative Results</h2>
+        <img src="static/images/MM_25-main_table.png" alt="T2I_Compbench" class="center-image" style="max-width: 100%; height: auto;">
+        <h2 class="subtitle has-text-centered">
+          <strong>
+            Unified FAS benchmark results on MCIO and WCS datasets.
+          </strong>
+        </h2>
+        <p>
+          InstructFLIP consistently outperforms existing FAS methods across all metrics and datasets in the unified
+          MCIO and WCS benchmarks. It achieves the lowest HTER and highest AUC and TPR@FPR=1%, with notable HTER
+          improvements over the prior SOTA (CFPL) by up to 47%. These gains demonstrate InstructFLIP’s ability to
+          robustly distinguish live from spoofed faces while maintaining high accuracy and low false positives.
+          While performance on the CASIA-CeFA (C) dataset is relatively modest, this highlights an opportunity to
+          enhance sensitivity to cultural or environmental subtleties. Overall, Table 2c confirms InstructFLIP as
+          a balanced and generalizable solution for real-world FAS applications.
+        </p>
+        <p style="font-size: 80%;"><i>* The CA dataset is used for training, with evaluation conducted on both MCIO and WCS benchmarks. Subtable
+          (a) presents results on MCIO, (b) reports on WCS, and (c) summarizes average performance across all
+          datasets. The best and second-best results are highlighted in red and blue, respectively.</i>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Quantitative Results -->
+
+
+<!-- Qualitative Results-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
+      <img src="static/images/MM_25-success_and_fail.png" alt="HICO_DET&VCOCO" class="center-image" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        <strong>
+          Illustration of samples predicted by the proposed method.
+        </strong>
+      </h2>
+      <p>Figure (a) and (b) show successful predictions from InstructFLIP, where the model accurately distinguishes
+        live and spoof faces with confident fake scores. It also correctly infers style attributes such as lighting,
+        environment, and camera quality, highlighting strong generalization to diverse domains. In contrast,
+        Figure (c) and (d) illustrate failure cases. The model misclassifies a spoofed poster as a real face due to
+        misleading texture and gloss, and incorrectly labels a real face as a spoofed PC screen, likely due to
+        overfitting to reflective patterns. These errors emphasize challenges in capturing
+        fine-grained material cues and image sharpness.
+      </p>
+      <p style="font-size: 80%;">
+      * <em style="color:Tomato;">Red</em><em> indicates incorrect answers.</em>
+      </p>
+    </div>
+
+    <div class="hero-body">
+      <img src="static/images/MM_25-compare_to_open.png" alt="T2I_Compbench" class="center-image" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        <strong>
+          Comparison with Open VLMs. Red indicates incorrect answers
+        </strong>
+      </h2>
+      <p>
+        We compare InstructFLIP with InstructBLIP and GPT-4o using content and style-based instructions on both spoofed
+        and live images. InstructFLIP consistently provides accurate predictions, identifying spoof types like Pad
+        screens and correctly recognizing real faces, while also handling style attributes such as lighting and
+        environment effectively. In contrast, InstructBLIP often misclassifies spoofed samples and struggles with
+        complex style cues. GPT-4o avoids making explicit judgments, offering general suggestions instead, which limits
+        its applicability. These results highlight InstructFLIP’s superior contextual understanding and task
+        adaptability among open VLMs.
+      </p>
+
+      <p style="font-size: 80%;">
+        * <em style="color:Tomato;">Red</em><em> indicates incorrect answers and </em> <em style="color:gray;"> gray </em>
+        <em>represents indirect or ambiguous responses.</em>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Qualitative Results -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title" style="text-align: center;">BibTeX</h2>
+      <pre><code>@inproceedings{lin2025instructflip,
+  title={InstructFLIP: Exploring Unified Vision-Language Model for Face Anti-spoofing},
+  author={Lin, Kun-Hsiang and Tseng, Yu-Wen and Huang, Kang-Yang and Wu, Jhih-Ciang and Cheng, Wen-Huang},
+  booktitle={Proceedings of the 33rd ACM International Conference on Multimedia},
+  year={2025}
+}</code></pre>
+    </div>
 </section>
 <!--End BibTex citation -->
 
@@ -161,7 +317,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
@@ -176,7 +332,7 @@
 
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-<!-- End of Statcounter Code -->
+    <!-- End of Statcounter Code -->
 
-</body>
-</html>
+  </body>
+  </html>
